@@ -1,0 +1,26 @@
+{
+  "name": "car-rental-management-system",
+  "version": "1.0.0",
+  "description": "Automation-Centric Car Rental Management System with Jira Integration",
+  "private": true,
+  "scripts": {
+    "setup": "ts-node scripts/setup.ts",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --prefix app/backend",
+    "dev:frontend": "npm run dev --prefix app/frontend",
+    "build": "npm run build --prefix app/backend && npm run build --prefix app/frontend",
+    "test": "npm test --prefix tests",
+    "test:headed": "npm run test:headed --prefix tests",
+    "test:report": "npm run test:report --prefix tests",
+    "workflow": "ts-node scripts/run-workflow.ts",
+    "bugs:create": "ts-node jira/create-bug.ts",
+    "lint": "npm run lint --prefix app/backend && npm run lint --prefix app/frontend"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

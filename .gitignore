@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.env
+*.db
+*.db-shm
+*.db-wal
+
+# Reports & Test Artifacts
+reports/playwright-report/
+reports/test-results.json
+reports/failed-tests*.json
+screenshots/
+reports/*.log
+
+# Build outputs
+app/backend/dist/
+app/frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
